@@ -1,6 +1,6 @@
 #include "Header.h"
 
-int maint()
+int main()
 {
 
 
