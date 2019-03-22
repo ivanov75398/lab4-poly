@@ -34,6 +34,7 @@ bool Mono::operator<(const Mono &b)
 
 List::List(const List &b)
 {
+	h = NULL;
 	if (b.h == NULL) { throw - 1; }
 	Link * p;
 	p = b.h;

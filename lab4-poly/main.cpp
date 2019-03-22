@@ -7,18 +7,18 @@ int main()
 	List A, B, C;
 	A.insert(M1);
 	B.insert(M2);
+	A + B;
 	C = A + B;
 	C.show();
 
 	string S1 = "3x^1+2x^2y^4-x^3+0.2y^1+23z^17";
 	string S2 = "x^1+0.3y^2z^5+22z^2+33x^16z^1";
-	List L1, L2, LRes;
+	
+	List L1 = *convert(S1);
+	List L2 = *convert(S2);
+	List LRes;
 
 	LRes = L1 + L2;
-	LRes.show();
-	cout << endl;
-
-	LRes = L1 * L2;
 	LRes.show();
 	cout << endl;
 
