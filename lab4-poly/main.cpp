@@ -7,7 +7,7 @@ int main()
 	List A, B, C;
 	A.insert(M1);
 	B.insert(M2);
-	C = A + B;
+	C = (A + B);
 	C.show();
 
 	string S1 = "3x^1+2x^2y^4-x^3+0.2y^1+23z^17";

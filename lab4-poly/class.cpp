@@ -3,7 +3,7 @@
 Mono::Mono(int stX, int stY, int stZ, double _koef)
 {
 	koef = _koef;
-	if ((stX<0)||(stX>20)||(stY<0)||(stY>20)||(stZ<0)||(stZ>20))
+	if ((stX<0)||(stX>=20)||(stY<0)||(stY>=20)||(stZ<0)||(stZ>=20))
 	{
 		throw - 1;
 	}
@@ -34,7 +34,6 @@ bool Mono::operator<(const Mono &b)
 
 List::List(const List &b)
 {
-	if (b.h == NULL) { throw - 1; }
 	Link * p;
 	p = b.h;
 	while (p != NULL)
@@ -82,12 +81,12 @@ void List::insertLast(Mono monom)
 	p = new Link;
 	p->val = monom;
 	p->n = NULL;
-	Link * t;
 	if (h == NULL)
 	{
 		h = p;
 		return;
 	}
+	Link * t;
 	t = h;
 	while (t->n != NULL)
 	{
@@ -135,7 +134,7 @@ List List::operator+(const List &b)
 			double newkoef;
 			int svertka;
 			svertka = p1->val.getSvert();
-			newkoef = p1->val.getKoef() + p2->val.getKoef();			
+			newkoef = (p1->val.getKoef() + p2->val.getKoef());			
 			if (newkoef == 0.0)
 			{
 				p1 = p1->n;
