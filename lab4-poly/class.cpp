@@ -34,11 +34,13 @@ bool Mono::operator<(const Mono &b)
 
 List::List(const List &b)
 {
+	h = NULL;
+	if (b.h == NULL) { h = NULL; }
 	Link * p;
 	p = b.h;
 	while (p != NULL)
 	{
-		this->insert(p->val);
+		this->insertLast(p->val);
 		p = p->n;
 	}
 }
@@ -256,7 +258,8 @@ void List::show()
 	p = h;
 	while (p != NULL)
 	{
-		cout << p->val << endl;
+		cout << p->val;
 		p = p->n;
 	}
+	cout << endl;
 }

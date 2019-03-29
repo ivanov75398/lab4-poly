@@ -19,7 +19,7 @@ public:
 	double getKoef(void) { return koef; }
 	friend ostream & operator<<(ostream &os, const Mono &b)
 	{
-		cout << b.koef << "/" << b.sv;
+		cout << b.koef << "/" << b.sv << "   /   " << endl;
 		return os;
 	}
 	void setSvert(int _sv) { sv = _sv; }
